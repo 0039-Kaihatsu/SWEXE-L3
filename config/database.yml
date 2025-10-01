@@ -29,8 +29,8 @@ primary: &primary_production
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: mysite_gqt6
-  username: mysite_gqt6_user
+  database: mysite_i0d9
+  username: mysite_i0d9_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
 cache:
