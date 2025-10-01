@@ -1,0 +1,32 @@
+.flash.notice {
+  color: green;
+}
+.flash.alert {
+  color: red;
+}
+#error_explanation {
+  border: 2px solid red;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #ffe6e6;
+}
+
+.tab {
+  background-color: #e0f7fa;   /* 優しい水色の背景 */
+  border: 1px solid #b2ebf2;  /* 薄い水色の境界線 */
+  border-radius: 8px;          /* 角を丸く */
+  padding: 10px 15px;          /* 内側の余白 */
+  margin-bottom: 10px;         /* 下のブロックとの余白 */
+  list-style: none;            /* liの点を消す */
+  display: inline-block;               /* 横並びにリンクを整列させる */
+  align-items: center;          /* 高さをリンクの中央に揃える */
+  transition: background-color 0.3s; /* ホバー時に色を変えるアニメーション */
+}
+
+.tab:hover {
+  background-color: #b2ebf2;   /* ホバー時は少し濃い水色 */
+}
+
+.tab li {
+  margin: 0;                    /* liの余白をリセット */
+}

@@ -1,0 +1,38 @@
+ja:
+  helpers:
+    submit:
+      create: "%{model}を作成"
+      update: "%{model}を更新"
+      submit: "保存"
+
+  views:
+    pagination:
+      next: "次へ"
+      previous: "前へ"
+
+  actions:
+    new: "新規作成"
+    edit: "編集"
+    destroy: "削除"
+    back: "戻る"
+
+  # Rails標準リンクの翻訳
+  helpers:
+    actions:
+      new: "新規作成"
+      edit: "編集"
+      destroy: "削除"
+      back: "戻る"
+    submit:
+      book:
+        create: "新規作成"
+        update: "更新"
+
+  activerecord:
+    models:
+      book: "本"
+    attributes:
+      book:
+        title: "タイトル"
+        author: "著者"
+        price: "価格"

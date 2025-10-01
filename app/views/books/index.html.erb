@@ -1,0 +1,13 @@
+<h1>文書管理アプリ</h1>
+<%= link_to "新規作成", new_book_path %>
+<ul>
+  <% @books.each do |book| %>
+    <div class = "tab">
+    <li>
+      <%= link_to book.title, book_path(book) %> |
+      <%= link_to "編集", edit_book_path(book) %> |
+      <%= button_to "削除", book, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+    </li>
+    </div>
+  <% end %>
+</ul>
