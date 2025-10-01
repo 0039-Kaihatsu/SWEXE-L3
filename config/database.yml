@@ -28,7 +28,6 @@ primary: &primary_production
   <<: *default
   adapter: postgresql
   encoding: unicode
-  url: <%= ENV['DATABASE_URL'] %>
   database: mysite_gqt6
   username: mysite_gqt6_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
