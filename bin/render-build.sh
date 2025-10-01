@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # exit on error
-# bin/render-build.sh
 set -o errexit
 
 bundle install
