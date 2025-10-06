@@ -3,30 +3,48 @@
   <head>
     <title><%= content_for(:title) || "Book App" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= yield :head %>
-
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <style>
+      #container { display:flex; flex-direction:column; min-height:100vh; }
+      #header { background:#ffcdd2; color:#000; padding:1rem; }
+      #main-content { display:flex; flex:1; background:#f5f5f5; }
+      #sidebar { width:250px; background:#eee; padding:1rem; }
+      #content { flex:1; padding:1rem; background:#fff; min-height:400px; }
+      #footer { background:#ffcdd2; color:#000; text-align:center; padding:1rem; }
+
+      .flash { padding:1rem; margin:0.5rem; border-radius:4px; }
+      .notice { background:#dff0d8; color:#3c763d; }
+      .alert { background:#f2dede; color:#a94442; }
+    </style>
   </head>
 
   <body>
     <% flash.each do |key, message| %>
       <div class="flash <%= key %>"><%= message %></div>
     <% end %>
-    
-    <%= yield %>
+
+    <div id="container">
+      <div id="header">
+        <%= render "layouts/header" %>
+      </div>
+
+      <div id="main-content">
+        <div id="sidebar">
+          <%= render "layouts/sidebar" %>
+        </div>
+
+        <div id="content">
+          <%= yield %>
+        </div>
+      </div>
+
+      <div id="footer">
+        <%= render "layouts/footer" %>
+      </div>
+    </div>
   </body>
 </html>

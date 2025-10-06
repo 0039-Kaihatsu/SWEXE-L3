@@ -1,0 +1,13 @@
+<aside>
+  <h2>カテゴリー</h2>
+  <ul>
+    <li><%= link_to "すべての本", books_path %></li>
+    <li><%= link_to "価格順", books_path(order: :price) %></li>
+    <li><%= link_to "著者別", books_path(order: :author) %></li>
+  </ul>
+
+  <h2>アクション</h2>
+  <ul>
+    <li><%= link_to "新しい本を追加", new_book_path %></li>
+  </ul>
+</aside>
